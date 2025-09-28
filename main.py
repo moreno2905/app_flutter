@@ -19,11 +19,11 @@ def get_connection():
         password="yqtj0rcGg*l",
         port=5432
     )
-@Demo App.get("/")
+@app.get("/")
 def home():
     return {"mensaje": "API con PostgreSQL funcionando :cohete:"}
 # :cohete: Nuevo endpoint: resumen de menús
-@Demo App.get("/resumen_menus")
+@app.get("/resumen_menus")
 def obtener_resumen_menus():
     conn = get_connection()
     cur = conn.cursor()
